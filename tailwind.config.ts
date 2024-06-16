@@ -1,13 +1,13 @@
-import type { Config } from "tailwindcss"
+import type { Config } from "tailwindcss";
 
 const config = {
   darkMode: ["class"],
   content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
-	],
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
+  ],
   prefix: "",
   theme: {
     container: {
@@ -75,9 +75,27 @@ const config = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
+      backgroundImage: {
+        "left-lines": "url('/menu/left.svg')",
+        "right-lines": "url('/menu/right.svg')",
+      },
+      animation: {
+        shiftLeft: 'shiftLeft 0.4s steps(2) infinite',
+        shiftRight: 'shiftRight 0.4s steps(2) infinite',
+      },
+      keyframes: {
+        shiftLeft: {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-10px)" },
+        },
+        shiftRight: {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(10px)" },
+        },
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],
-} satisfies Config
+} satisfies Config;
 
-export default config
+export default config;
