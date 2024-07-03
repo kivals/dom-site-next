@@ -88,6 +88,7 @@ const config = {
       backgroundImage: {
         "left-lines": "url('/menu/left.svg')",
         "right-lines": "url('/menu/right.svg')",
+        "description": "url('/description/bg.png')",
       },
     },
   },

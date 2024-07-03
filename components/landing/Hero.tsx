@@ -15,7 +15,6 @@ const Hero = () => {
   const [activeVideo, setActiveVideo] = useState(videos[0]);
 
   const endVideoHandler = () => {
-    console.log("end")
     const index = videos.findIndex((v) => v.name === activeVideo.name);
     videos[index + 1]
       ? setActiveVideo(videos[index + 1])
@@ -23,7 +22,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="container mx-auto">
+    <section className="container mx-auto mb-4">
       <div className="relative">
         <Video
           path={activeVideo.path}
