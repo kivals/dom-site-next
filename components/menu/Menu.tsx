@@ -1,7 +1,7 @@
 import React from "react";
-import MenuHeader from "@/components/MenuHeader";
-import MenuBody from "@/components/MenuBody";
-import MenuFooter from "@/components/MenuFooter";
+import MenuHeader from "@/components/menu/MenuHeader";
+import MenuBody from "@/components/menu/MenuBody";
+import MenuFooter from "@/components/menu/MenuFooter";
 import { cn } from "@/lib/utils";
 import {ContainerStyles} from "@/types/types";
 

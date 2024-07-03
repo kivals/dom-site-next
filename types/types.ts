@@ -1,3 +1,9 @@
 export interface ContainerStyles {
-  containerStyles?: string
+  containerStyles?: string;
+}
+
+export interface IVideoConfig {
+  name: string;
+  path: string;
+  duration: number;
 }

@@ -70,20 +70,6 @@ const config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
-      },
-      animation: {
-        "accordion-down": "accordion-down 0.2s ease-out",
-        "accordion-up": "accordion-up 0.2s ease-out",
-      },
-      backgroundImage: {
-        "left-lines": "url('/menu/left.svg')",
-        "right-lines": "url('/menu/right.svg')",
-      },
-      animation: {
-        shiftLeft: 'shiftLeft 0.4s steps(2) infinite',
-        shiftRight: 'shiftRight 0.4s steps(2) infinite',
-      },
-      keyframes: {
         shiftLeft: {
           "0%": { transform: "translateX(0)" },
           "100%": { transform: "translateX(-10px)" },
@@ -92,6 +78,16 @@ const config = {
           "0%": { transform: "translateX(0)" },
           "100%": { transform: "translateX(10px)" },
         },
+      },
+      animation: {
+        "accordion-down": "accordion-down 0.2s ease-out",
+        "accordion-up": "accordion-up 0.2s ease-out",
+        shiftLeft: 'shiftLeft 0.4s steps(2) infinite',
+        shiftRight: 'shiftRight 0.4s steps(2) infinite',
+      },
+      backgroundImage: {
+        "left-lines": "url('/menu/left.svg')",
+        "right-lines": "url('/menu/right.svg')",
       },
     },
   },
