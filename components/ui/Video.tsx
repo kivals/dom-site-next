@@ -1,6 +1,6 @@
-import { useEffect, useRef } from "react";
-import {clsx} from "clsx";
-import {ContainerStyles} from "@/types/types";
+import { useEffect, useRef, useState } from "react";
+import { clsx } from "clsx";
+import { ContainerStyles } from "@/types/types";
 
 interface IVideoProps extends ContainerStyles {
   path: string;
@@ -10,14 +10,30 @@ interface IVideoProps extends ContainerStyles {
 
 const Video = ({ path, containerStyles, shadow, onEnded }: IVideoProps) => {
   const videoRef = useRef<HTMLVideoElement>(null);
+  const [videoHeight, setVideoHeight] = useState<string>("auto");
 
   useEffect(() => {
-    console.log(videoRef.current?.clientHeight)
-    videoRef.current?.load();
+    const videoElement = videoRef.current;
+    if (videoElement) {
+      videoElement.load();
+
+      const handleLoadedData = () => {
+        setVideoHeight(String(videoElement.clientHeight));
+      };
+
+      videoElement.addEventListener("loadeddata", handleLoadedData);
+
+      return () => {
+        videoElement.removeEventListener("loadeddata", handleLoadedData);
+      };
+    }
   }, [path]);
 
   return (
-    <div className={clsx(containerStyles, "relative")}>
+    <div
+      className={clsx(containerStyles, "relative")}
+      style={{ height: `${videoHeight}px` }}
+    >
       <video
         className="w-full shadow-lg"
         ref={videoRef}
@@ -31,7 +47,9 @@ const Video = ({ path, containerStyles, shadow, onEnded }: IVideoProps) => {
         <source src={path} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
-      {shadow && <div className="absolute left-0 right-0 top-0 bottom-0 bg-black opacity-40" />}
+      {shadow && (
+        <div className="absolute bottom-0 left-0 right-0 top-0 bg-black opacity-40" />
+      )}
     </div>
   );
 };
