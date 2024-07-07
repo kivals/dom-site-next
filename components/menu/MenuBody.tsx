@@ -16,8 +16,8 @@ const nav: { name: string; path: string }[] = [
 
 const MenuBody = ({ containerStyles }: ContainerStyles) => {
   return (
-    <div className={cn("py-5", containerStyles)}>
-      <ul className="flex flex-col gap-4 text-2xl uppercase sm:max-h-[300px] sm:flex-wrap">
+    <div className={cn("py-2 md:py-5", containerStyles)}>
+      <ul className="flex flex-col gap-2 md:gap-4 text-xl md:text-2xl uppercase sm:max-h-[300px] sm:flex-wrap">
         {nav.map((item, index) => (
           <li key={index}>
             <Link
