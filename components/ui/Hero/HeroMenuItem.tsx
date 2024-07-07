@@ -14,12 +14,14 @@ const HeroMenuItem = ({
   onClick,
 }: IHeroMenuItemProps) => {
   return (
-    <div
+    <motion.div
+      animate={{ x: isActive ? 25 : 0 }} // Сдвиг вправо на 100 пикселей при клике
+      transition={{ type: 'spring', stiffness: 300 }}
       onClick={onClick}
       key={video.name}
       className={clsx(
         isActive ? "opacity-100" : "opacity-70",
-        "mb-1 inline-block cursor-pointer hover:opacity-100",
+        "inline-block cursor-pointer hover:opacity-100",
       )}
     >
       <span className="mb-2 text-xl font-bold uppercase text-white transition-all sm:mb-2 sm:text-2xl lg:mb-3 lg:text-4xl">
@@ -33,7 +35,7 @@ const HeroMenuItem = ({
           transition={{ duration: video.duration / 1000, ease: "linear" }}
         />
       )}
-    </div>
+    </motion.div>
   );
 };
 

@@ -2,7 +2,6 @@ import {Sheet, SheetClose, SheetContent, SheetTrigger} from "@/components/ui/she
 import {AlignJustify, X} from "lucide-react";
 import * as React from "react";
 import Image from "next/image";
-import MenuFooter from "@/components/menu/MenuFooter";
 import Menu from "@/components/menu/Menu";
 
 const BurgerNav = () => {

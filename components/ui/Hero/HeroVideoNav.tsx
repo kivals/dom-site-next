@@ -18,7 +18,7 @@ const HeroVideoNav = ({
     <nav className={clsx(containerStyles, "flex items-center justify-end")}>
       <ul>
         {videos.map((video) => (
-          <li key={video.name}>
+          <li key={video.name} className="mb-2 sm:mb-3 md:mb-4 lg:mb-6">
             <HeroMenuItem
               video={video}
               onClick={() => onClick(video)}
