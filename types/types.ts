@@ -7,3 +7,10 @@ export interface IVideoConfig {
   path: string;
   duration: number;
 }
+
+export interface IAboutItem {
+  id: string,
+  title: string;
+  description: string;
+  image: string;
+}
