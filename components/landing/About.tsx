@@ -1,7 +1,4 @@
-"use client";
-import AboutImages from "@/components/AboutImages";
-import useIsMobile from "@/hooks/UseIsMobile";
-import AboutImagesMobile from "@/components/AboutImagesMobile";
+import AboutImages from "@/components/about/AboutImages";
 
 const aboutContent = [
   {
@@ -28,18 +25,11 @@ const aboutContent = [
 ];
 
 const About = () => {
-  const { isMobile } = useIsMobile(768);
   return (
-    <section>
+    <section className="mb-14">
       <div className="container">
         <h2 className="mb-4 text-2xl font-bold md:text-4xl">ДОМ - это ...</h2>
-        <div className="flex flex-col gap-6">
-          {isMobile ? (
-            <AboutImagesMobile content={aboutContent} />
-          ) : (
-            <AboutImages content={aboutContent} />
-          )}
-        </div>
+        <AboutImages content={aboutContent} />
       </div>
     </section>
   );

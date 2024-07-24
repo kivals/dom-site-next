@@ -1,11 +1,12 @@
+"use client";
 import { useEffect, useState } from "react";
 
 const useIsMobile = (breakpoint = 640) => {
-  const checkForDevice = () => window.innerWidth < breakpoint;
+  const [isMobile, setIsMobile] = useState(false);
 
-  const [isMobile, setIsMobile] = useState(checkForDevice());
-  console.log(isMobile)
   useEffect(() => {
+    const checkForDevice = () => window.innerWidth < breakpoint;
+
     const handlePageResized = () => {
       setIsMobile(checkForDevice());
     };
