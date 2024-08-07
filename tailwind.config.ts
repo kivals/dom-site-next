@@ -89,6 +89,7 @@ const config = {
         "left-lines": "url('/menu/left.svg')",
         "right-lines": "url('/menu/right.svg')",
         "description": "url('/description/bg.png')",
+        "polaroid": "url('/teachers/bg2.png')",
       },
     },
   },
