@@ -2,8 +2,8 @@ import DirectionCarousel from "@/components/DirectionCarousel";
 
 const Directions = () => {
   return (
-    <section className="mb-12">
-      <div className="container">
+    <section className="mb-4">
+      <div className="container px-2 md:px-8">
         <div className="mb-6 flex-col items-end">
           <h2 className="mb-4 text-4xl font-bold uppercase md:text-4xl">
             Куда пойти
@@ -14,7 +14,7 @@ const Directions = () => {
             найти то самое?
           </p>
         </div>
-        <DirectionCarousel containerStyles="ml-12" />
+        <DirectionCarousel containerStyles="md:ml-12" />
       </div>
     </section>
   );
