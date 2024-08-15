@@ -27,9 +27,9 @@ const aboutContent = [
 const About = () => {
   return (
     <section className="mb-14">
-      <div className="container">
+      <div className="container mx-auto px-2 md:px-8">
         <h2 className="mb-4 text-2xl font-bold md:text-4xl">ДОМ - это ...</h2>
-        <AboutImages content={aboutContent} />
+        <AboutImages content={aboutContent}/>
       </div>
     </section>
   );

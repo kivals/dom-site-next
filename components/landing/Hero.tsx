@@ -22,19 +22,21 @@ const Hero = () => {
   };
 
   return (
-    <section className="container mx-auto mb-4">
-      <div className="relative">
-        <Video
-          path={activeVideo.path}
-          shadow
-          onEnded={endVideoHandler}
-          containerStyles="w-full md:w-[90%]"
-        />
-        <HeroVideoNav
-          activeVideo={activeVideo}
-          onClick={setActiveVideo}
-          containerStyles="absolute bottom-0 left-0 right-0 top-0 mr-4 "
-        />
+    <section className="mb-4">
+      <div className="container mx-auto px-2 md:px-8">
+        <div className="relative">
+          <Video
+            path={activeVideo.path}
+            shadow
+            onEnded={endVideoHandler}
+            containerStyles="w-full md:w-[90%]"
+          />
+          <HeroVideoNav
+            activeVideo={activeVideo}
+            onClick={setActiveVideo}
+            containerStyles="absolute bottom-0 left-0 right-0 top-0 mr-4 "
+          />
+        </div>
       </div>
     </section>
   );

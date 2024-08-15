@@ -5,7 +5,7 @@ import LinkTel from "@/components/ui/LinkTel";
 const Header = () => {
   return (
     <header className="mb-4">
-      <div className="container mx-auto">
+      <div className="container mx-auto px-2 md:px-8">
         <div className="flex items-center justify-between gap-x-6 py-2">
           <div className="flex-1">
             <Logo />
