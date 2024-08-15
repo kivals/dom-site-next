@@ -64,7 +64,7 @@ const DirectionCard = () => {
         transformStyle: "preserve-3d",
         transform,
       }}
-      className="relative h-[149px] w-[149px] rounded-xl bg-neutral-900 sm:h-[280px] sm:w-[280px] md:h-[340px] md:w-[340px]"
+      className="relative rounded-xl bg-neutral-900 h-[230px] w-[230px] md:h-[380px] md:w-[380px]"
     >
       <div
         style={{
@@ -73,29 +73,29 @@ const DirectionCard = () => {
         }}
         className="absolute inset-2 grid place-content-center overflow-hidden rounded-xl bg-neutral-800 shadow-lg sm:inset-2 md:inset-2"
       >
-        <motion.h4
-          whileHover="scale"
-          className="absolute left-4 top-4 text-xl font-bold"
-          transition={{
-            duration: 0.3,
-            ease: "easeInOut"
-          }}
-          variants={{
-            scale: { scale: 1.1, originX: 0, color: "#e5ce76" },
-            initial: {scale: 1, originX: 0, color: "#ffffff"},
-          }}
-          animate={controls}
-        >
-          HipHop
-        </motion.h4>
         <Image
-          className="rounded-xl object-fill sm:w-[180px] md:w-[240px]"
+          className="rounded-xl object-fill sm:w-[180px] md:w-[280px] mb-3"
           src="/about/second.png"
           alt=""
           width={149}
           height={149}
           priority
         />
+        <motion.h4
+          whileHover="scale"
+          className="text-xl font-bold text-center"
+          transition={{
+            duration: 0.3,
+            ease: "easeInOut"
+          }}
+          variants={{
+            scale: {scale: 1.1, originX: 0, color: "#e5ce76"},
+            initial: {scale: 1, originX: 0, color: "#ffffff"},
+          }}
+          animate={controls}
+        >
+          HipHop
+        </motion.h4>
       </div>
     </motion.div>
   );

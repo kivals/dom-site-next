@@ -24,7 +24,7 @@ const DirectionCarousel = ({ containerStyles }: DirectionCarouselProps) => {
           {Array.from({ length: 5 }).map((_, index) => (
             <CarouselItem
               key={index}
-              className="basis-[149px] rounded-full sm:basis-[280px] md:basis-[340px]"
+              className="rounded-full basis-[230px] md:basis-[380px]"
             >
               <DirectionsItem />
             </CarouselItem>
