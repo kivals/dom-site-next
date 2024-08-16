@@ -23,7 +23,7 @@ const AboutImagesDesktop = ({ content }: AboutImagesDesktopProps) => {
       {/*left*/}
       <div className="sticky top-6 flex h-[90vh] w-1/2 items-center">
         <Image
-          className="max-h-[500px] object-contain"
+          className="landscape:h-full max-h-[500px] object-contain"
           src={getImageSrc()}
           ref={imageRef}
           width="500"
