@@ -75,4 +75,25 @@
   body {
     @apply bg-background text-primary;
   }
+
+  .video-carousel-container {
+    /*#width: calc(100vw - (100vw - 1400px) / 2);*/
+    width: 100%;
+
+    @media (min-width: 640px) {
+      width: calc(100vw - (100vw - 640px) / 2);
+    }
+
+    @media (min-width: 768px) {
+      width: calc(100vw - (100vw - 768px) / 2);
+    }
+
+    @media (min-width: 1024px) {
+      width: calc(100vw - (100vw - 1024px) / 2);
+    }
+
+    @media (min-width: 1280px) {
+      width: calc(100vw - (100vw - 1280px) / 2);
+    }
+  }
 }
