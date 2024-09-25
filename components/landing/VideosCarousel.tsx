@@ -35,11 +35,15 @@ const VideosCarousel = () => {
       <div className="video-carousel-container">
         <CarouselContent className="gap-6">
           {Array.from({ length: 5 }).map((_, index) => (
-            <CarouselItem key={index} className="basis-[380px] rounded-full">
+            <CarouselItem
+              key={index}
+              className="basis-[280px] rounded-full md:basis-[380px] lg:basis-[460px]"
+            >
               <iframe
+                className="md:h-[240px] md:w-[380px] lg:h-[280px] lg:w-[460px]"
                 src="https://vk.com/video_ext.php?oid=-18567129&id=456239544"
-                width="380"
-                height="240"
+                width="280"
+                height="190"
                 allow="autoplay; encrypted-media; fullscreen; picture-in-picture; screen-wake-lock;"
                 allowFullScreen
               ></iframe>
